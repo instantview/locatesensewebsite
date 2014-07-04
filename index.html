@@ -28,14 +28,19 @@
   //		$("#sendDetails")
   //  form-send  form-phone form-name form-email contact-form
 
-	$( document ).ready(function() {
-		jQuery(function($)
-		{
-			$(".contact-form").submit(function()
-			{
+		$( document ).ready(function() {
+			alert("loaded");
+
+			$(".contact-form").submit(function(){
+			alert("about to send!!");
 				var email = $(".form-email").val(); // get email field value
 				var name = $(".form-name").val(); // get name field value
 				var msg = $(".form-phone").val(); // get message field value
+
+				alert("email: " + email);
+				alert("name:" + name);
+				alert("msg: " + msg);
+
 				$.ajax(
 				{
 					type: "POST",
@@ -71,7 +76,6 @@
 				return false; // prevent page refresh
 			});
 		});
-	});
 
   </script>
 
