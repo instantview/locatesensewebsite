@@ -433,7 +433,8 @@
   			alert("about to send!!");
   				var email = $(".form-email").val(); // get email field value
   				var name = $(".form-name").val(); // get name field value
-  				var msg = $(".form-phone").val(); // get message field value
+  				var msg = $(".form-message").val(); // get message field value
+				var tel = $(".form-phone").val(); // get message field value
 
   				alert("email: " + email);
   				alert("name:" + name);
@@ -446,13 +447,13 @@
   					data: {
   						'key': 'yf0HWszs9JLKcCOaB24Jmw',
   						'message': {
-  							'from_email': email,
-  							'from_name': name,
+  							'from_email': 'contact@locatesense.com',
+  							'from_name': 'LocateSense Website',
   							'headers': {
   								'Reply-To': email
   							},
   							'subject': 'Website Contact Form Submission',
-  							'text': msg,
+  							'text': 'name: ' + name + 'email' + email + 'tel:' + tel + 'msg: ' + msg,
   							'to': [
   							{
   								'email': 'e.w.mellor@gmail.com',
