@@ -422,24 +422,12 @@
 
     <script>
 
-    //  yf0HWszs9JLKcCOaB24Jmw
-    //		$("#sendDetails")
-    //  form-send  form-phone form-name form-email contact-form
-
   		$( document ).ready(function() {
-  			alert("loaded");
-
   			$(".contact-form").submit(function(){
-  			alert("about to send!!");
   				var email = $(".form-email").val(); // get email field value
   				var name = $(".form-name").val(); // get name field value
   				var msg = $(".form-message").val(); // get message field value
 				var tel = $(".form-phone").val(); // get message field value
-
-  				alert("email: " + email);
-  				alert("name:" + name);
-  				alert("msg: " + msg);
-
   				$.ajax(
   				{
   					type: "POST",
@@ -453,7 +441,7 @@
   								'Reply-To': email
   							},
   							'subject': 'Website Contact Form Submission',
-  							'text': 'name: ' + name + 'email' + email + 'tel:' + tel + 'msg: ' + msg,
+  							'text': 'name: ' + name + ' email: ' + email + ' tel:' + tel + ' msg: ' + msg,
   							'to': [
   							{
   								'email': 'e.w.mellor@gmail.com',
@@ -464,7 +452,7 @@
   					}
   				})
   				.done(function(response) {
-  					alert('Your message has been sent. Thank you!'); // show success message
+  					alert('Your message has been sent and will will contact you shortly. Thank you!'); // show success message
   					$("#name").val(''); // reset field after successful submission
   					$("#email").val(''); // reset field after successful submission
   					$("#msg").val(''); // reset field after successful submission
