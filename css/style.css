@@ -658,16 +658,9 @@ footer li a:hover {
   height: auto;
   display: block;
   padding: 50px 0 0;
-  background: url('../images/photos/broadmarsh.png') no-repeat 50% 50%;
   position: relative;
-  background-attachment: fixed;
   text-align: center;
   /*border-bottom: 7px solid #ff605a;*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -ms-behavior: url(../js/backgroundsize.htc);
 }
 .content .subheader h1 {
   padding: 0 20px 0;
@@ -696,7 +689,7 @@ footer li a:hover {
   left: 50%;
   margin-left: -30px;
   background: url('../images/go_down.png') no-repeat 0 0;
-  -webkit-animation-name: bounce;
+ /* -webkit-animation-name: bounce;
   -moz-animation-name: bounce;
   -o-animation-name: bounce;
   -ms-animation-name: bounce;
@@ -715,7 +708,7 @@ footer li a:hover {
   -moz-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
   -ms-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite;*/
 }
 .content .subheader .down:hover {
   -webkit-animation-name: none;

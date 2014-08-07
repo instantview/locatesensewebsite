@@ -1,0 +1,33 @@
+#image1 {
+  width: 100%;
+  height: 100vh;
+  background: url('../images/photos/broadmarsh.jpg') no-repeat 50% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -ms-behavior: url(../js/backgroundsize.htc);
+}
+#image2 {
+  width: 100%;
+  height: 100vh;
+  background: url('../images/photos/american_apparel.jpg') no-repeat 50% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -ms-behavior: url(../js/backgroundsize.htc);
+}
+#image3 {
+  width: 100%;
+  height: 100vh;
+  background: url('../images/photos/cobden.jpg') no-repeat 50% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -ms-behavior: url(../js/backgroundsize.htc);
+}
