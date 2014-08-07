@@ -684,8 +684,8 @@ footer li a:hover {
   transition: none;
   width: 60px;
   height: 60px;
-  position: absolute;
-  bottom: 20px;
+  position: relative;
+  margin-top: 40%;
   left: 50%;
   margin-left: -30px;
   background: url('../images/go_down.png') no-repeat 0 0;
