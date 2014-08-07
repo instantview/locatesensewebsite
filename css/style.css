@@ -658,11 +658,11 @@ footer li a:hover {
   height: auto;
   display: block;
   padding: 50px 0 0;
-  background: url('http://locatesense.com/images/1440972.jpg') no-repeat 50% 50%;
+  background: url('../images/photos/broadmarsh.png') no-repeat 50% 50%;
   position: relative;
   background-attachment: fixed;
   text-align: center;
-  border-bottom: 7px solid #ff605a;
+  /*border-bottom: 7px solid #ff605a;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -1,38 +1,144 @@
 ﻿<!DOCTYPE html>
 <html>
-	<head>
-	    <title>LocateSense</title>
-	    <link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" media="(min-width: 768px)" href="css/min768.css" />
-		<script src="js/modernizr-2.6.2.js"></script>
+<head>
+	<title>LocateSense</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" media="(min-width: 768px)" href="css/min768.css" />
+	<script src="js/modernizr-2.6.2.js"></script>
 
-		<link href='http://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
-	</head>
-	<body id="top">
-	  <div id="layout">
-	  	<header>
-	  		<div class="container">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
+</head>
+<body id="top">
+	<div id="layout">
+		<header>
+			<div class="container">
 
-        <!-- logo -->
-        <a href="#top" class="logo">
-          <img src="images/logo.png" alt="">
-        </a>
-        <!-- end of logo -->
+				<!-- logo -->
+				<a href="#top" class="logo">
+					<img src="images/logo.png" alt="">
+				</a>
+				<!-- end of logo -->
 
-        <nav>
+				<nav>
 
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#clients">Clients</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#clients">Clients</a></li>
+						<li><a href="#team">Team</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
 
-        </nav><!-- end of navigation -->
+				</nav><!-- end of navigation -->
 
-      </div><!-- end of container in header -->
-	  	</header>
-	  </div>
-	</body>
+			</div><!-- end of container in header -->
+		</header>
+
+		<div class="content">
+			<div class="subheader">
+
+				<div class="container">
+					<h1>Say hello to WDA</h1>
+					<span><h4>people who love design</h4></span>
+					<div class="clearfix"></div>
+					<a href="#work" class="btn">View our portfolio</a>
+					<a href="#about" class="down"></a>
+				</div><!-- end of container in subheader -->
+
+			</div> <!-- end of subheader -->
+
+			<!-- Section About -->
+			<section id="about">
+
+				<div class="container">
+
+					<ul>
+
+						<li>
+							<span class='icons-img1'></span>
+							<h6>Web Development</h6>
+							<p>Some of our services include web design, markup, coding, web server configuration and many more.</p>
+						</li>
+						<li>
+							<span class='icons-img2'></span>
+							<h6>App Development</h6>
+							<p>Whichever handheld device you have, we’ll provide you with the right app for it. Let us know what you need!</p>
+						</li>
+						<li>
+							<span class='icons-img3'></span>
+							<h6>Branding</h6>
+							<p>Our top-notch branding experts will make your product or service leave an impact on the client.</p>
+						</li>
+						<li>
+							<span class='icons-img4'></span>
+							<h6>Printing</h6>
+							<p>We offer our clients only high quality printing, such as digital printing, litho printing, banner/flyer printing, etc.</p>
+						</li>
+					</ul><!-- end of list of services -->
+
+				</div><!-- end of container in about section -->
+
+			</section> <!-- end of about  -->
+		</div>
+	</div>
+
+	<!-- load script for google map -->
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+
+
+	<!-- JavaScript at the bottom for fast page loading -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.autosize.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/lightbox-2.6.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/init.js"></script>
+
+	<script>
+
+		$( document ).ready(function() {
+			$(".contact-form").submit(function(){
+  				var email = $(".form-email").val(); // get email field value
+  				var name = $(".form-name").val(); // get name field value
+  				var msg = $(".form-message").val(); // get message field value
+				var tel = $(".form-phone").val(); // get message field value
+				$.ajax(
+				{
+					type: "POST",
+					url: "https://mandrillapp.com/api/1.0/messages/send.json",
+					data: {
+						'key': 'yf0HWszs9JLKcCOaB24Jmw',
+						'message': {
+							'from_email': 'contact@locatesense.com',
+							'from_name': 'LocateSense Website',
+							'headers': {
+								'Reply-To': email
+							},
+							'subject': 'Website Contact Form Submission',
+							'text': 'name: ' + name + ' email: ' + email + ' tel:' + tel + ' msg: ' + msg,
+							'to': [
+							{
+								'email': 'e.w.mellor@gmail.com',
+								'name': 'Edward Mellor',
+								'type': 'to'
+							}]
+						}
+					}
+				})
+				.done(function(response) {
+  					alert('Your message has been sent and will will contact you shortly. Thank you!'); // show success message
+  					$("#name").val(''); // reset field after successful submission
+  					$("#email").val(''); // reset field after successful submission
+  					$("#msg").val(''); // reset field after successful submission
+  				})
+				.fail(function(response) {
+					alert('Error sending message.');
+				});
+  				return false; // prevent page refresh
+  			});
+});
+
+</script>
+</body>
 </html>
