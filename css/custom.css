@@ -31,3 +31,23 @@
   background-size: cover;
   -ms-behavior: url(../js/backgroundsize.htc);
 }
+
+.align-left {
+  text-align: left;
+  float: left;
+  background: rgba(41,41,41,.4);;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+@media (max-width: 767px) {
+  .align-left {
+    padding: 1em 1em 1em 1em;
+    margin: 0 0 0 0;
+  }
+  .content .subheader .down {
+    position: absolute;
+    top: 90%;
+  }
+}
+

@@ -170,8 +170,8 @@
     padding-top: 96px;
   }
   .content .subheader {
-    padding-top: 190px;
-    min-height: 600px;
+    padding-top: 20px;
+    min-height: 400px;
   }
   .content .subheader span {
     background: url('../images/line2.png') no-repeat 100% 50%;

@@ -663,7 +663,7 @@ footer li a:hover {
   /*border-bottom: 7px solid #ff605a;*/
 }
 .content .subheader h1 {
-  padding: 0 20px 0;
+ /* padding: 0 20px 0;*/
 }
 .content .subheader span {
   background: url('../images/line.png') no-repeat 100% 50%;
@@ -684,9 +684,9 @@ footer li a:hover {
   transition: none;
   width: 60px;
   height: 60px;
-  position: relative;
-  margin-top: 40%;
+  position: absolute;
   left: 50%;
+  bottom: 0;
   margin-left: -30px;
   background: url('../images/go_down.png') no-repeat 0 0;
  /* -webkit-animation-name: bounce;
