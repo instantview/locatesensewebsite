@@ -1,113 +1,173 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>LocateSense</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<link rel="stylesheet" media="(min-width: 768px)" href="css/min768.css" />
 	<script src="js/modernizr-2.6.2.js"></script>
 
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
 </head>
 <body id="top">
-	<div id="layout">
-		<header>
-			<div class="container">
+	<header>
+		<div class="container">
 
-				<!-- logo -->
-				<a href="#top" class="logo">
-					<img src="images/logo.png" alt="">
-				</a>
-				<!-- end of logo -->
+			<!-- logo -->
+			<a href="#top" class="logo">
+				<img src="images/logo.png" alt="">
+			</a>
+			<!-- end of logo -->
 
-				<nav>
+			<nav>
 
-					<ul>
-						<li><a href="#about">About</a></li>
-						<li><a href="#work">Work</a></li>
-						<li><a href="#clients">Clients</a></li>
-						<li><a href="#team">Team</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
+				<ul>
+					<li><a href="#consumer">Consumer</a></li>
+					<li><a href="#retailer">Retailer</a></li>
+					<li><a href="#clients">eLabels</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
 
-			</div><!-- end of container in header -->
-		</header>
+			</nav><!-- end of navigation -->
 
+		</div><!-- end of container in header -->
+	</header>
+	<div id="image1">
 		<div class="content">
-			<div id="image1" class="subheader">
+			<div class="subheader">
 
 				<div class="container">
 					<h1>Say hello to WDA</h1>
 					<span><h4>people who love design</h4></span>
 					<div class="clearfix"></div>
 					<a href="#work" class="btn">View our portfolio</a>
-					<a href="#about" class="down"></a>
 				</div><!-- end of container in subheader -->
-
-			</div> <!-- end of subheader -->
-
-			<div id="image2" class="subheader">
-
+				<a href="#consumer" class="down"></a>
 			</div> <!-- end of subheader -->
 		</div>
 	</div>
+	<div id="consumer">
+		<div class="content">
+			<div class="subheader">
+				<div class="container align-left">
+					<h1>Shopping application</h1>
+					<h5>Download Instantview&#39;s shopping app to see great location-specific recommendations and offers. Enjoy exploring the shops, cafes and restaurants in your high street</h5>
+				</div>
+				<a href="#retailer" class="down"></a>
+			</div>
+		</div>
+	</div>
+	<div id="retailer">
+		<div class="content">
+			<div class="subheader">
+				<div class="container">
+					<a href="#contact" class="down"></a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<!-- load script for google map -->
-	<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+	<!-- Begin of  #contact -->
+	<section id="contact">
+
+		<!-- Begin of  .container -->
+		<div class="container">
+			<h2>Contact Us</h2>
+			<p>This is Photoshop's version of lorem Ipsum proin gravida</p>
+			<form novalidate class='contact-form'>
+				<div class="left">
+					<input type="text" placeholder='Name' class='form-name' name='name' id='name'>
+					<input type="email" placeholder='Email' class='form-email' name='email' id='email'>
+					<input type="text" placeholder='Phone' class='form-phone' name='phone' id='phone'>
+				</div>
+				<div class="left righ">
+					<textarea placeholder='Message' class='form-message' name='message' id='message'></textarea>
+					<button class="btn lightgreen" id="form-send">Send Message</button>
+				</div>
+			</form>
+		</div>
+		<!-- End of .container  -->
+
+		<!-- Begin of #map  -->
+		<div id="map"></div>
+		<!-- End of #map  -->
+
+		<!-- Begin of  .container -->
+		<div class="container">
+
+			<!-- Begin of  .contact_info -->
+			<dl class="contact_info">
+				<dt><h6>Address</h6></dt>
+				<dd>
+					<span>InstantView</span><br>
+					<span>Antenna Media Centre, 9A Beck St, <br>Nottingham, NG1 1EQ</span>
+				</dd>
+				<dt><h6>Email</h6></dt>
+				<dd>
+					<a href="mailto:mark.habgood@instantview.co">mark.habgood@instantview.co</a>
+				</dd>
+				<dt><h6>Phone</h6></dt>
+				<dd>
+					<span>1-855-289-5858</span>
+				</dd>
+			</dl>
+			<!-- End of .contact_info  -->
+
+		</div>
+		<!-- End of .container  -->
 
 
-	<!-- JavaScript at the bottom for fast page loading -->
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery.autosize.js"></script>
-	<script src="js/jquery.isotope.min.js"></script>
-	<script src="js/lightbox-2.6.min.js"></script>
-	<script src="js/jquery.bxslider.js"></script>
-	<script src="js/jquery.validate.js"></script>
-	<script src="js/init.js"></script>
+		<!-- Begin of #order_now  -->
+		<div id="order_now">
 
-	<script>
+		</div>
+		<!-- End of #order_now  -->
 
-		$( document ).ready(function() {
-			$(".contact-form").submit(function(){
-  				var email = $(".form-email").val(); // get email field value
-  				var name = $(".form-name").val(); // get name field value
-  				var msg = $(".form-message").val(); // get message field value
-				var tel = $(".form-phone").val(); // get message field value
-				$.ajax(
-				{
-					type: "POST",
-					url: "https://mandrillapp.com/api/1.0/messages/send.json",
-					data: {
-						'key': 'yf0HWszs9JLKcCOaB24Jmw',
-						'message': {
-							'from_email': 'contact@locatesense.com',
-							'from_name': 'LocateSense Website',
-							'headers': {
-								'Reply-To': email
-							},
-							'subject': 'Website Contact Form Submission',
-							'text': 'name: ' + name + ' email: ' + email + ' tel:' + tel + ' msg: ' + msg,
-							'to': [
-							{
-								'email': 'e.w.mellor@gmail.com',
-								'name': 'Edward Mellor',
-								'type': 'to'
-							}]
-						}
-					}
-				})
-				.done(function(response) {
-  					alert('Your message has been sent and will will contact you shortly. Thank you!'); // show success message
-  					$("#name").val(''); // reset field after successful submission
-  					$("#email").val(''); // reset field after successful submission
-  					$("#msg").val(''); // reset field after successful submission
-  				})
-				.fail(function(response) {
-					alert('Error sending message.');
-				});
-  				return false; // prevent page refresh
-  			});
-});
+	</section>
+	<!-- End of #contact  -->
 
+</div> <!-- end of content -->
+
+<footer>
+
+	<div class="container">
+		<div class="left">
+			<a href="#top"><img src="images/logo.png" alt=""></a>
+			<small><a href="http://themestreet.net/">ThemeStreet.net</a> &copy; 2013. <i>All rights reserved.</i></small>
+		</div>
+		<ul class='right'>
+        <li><a href="" class="social-fb"></a></li><!--
+        --><li><a href="" class="social-tw"></a></li><!--
+        --><li><a href="" class="social-google"></a></li><!--
+    --><li><a href="" class="social-bb"></a></li>
+</ul>
+</div><!-- end of container in footer section -->
+
+</footer> <!-- end of footer -->
+
+<!-- load script for google map -->
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script src="js/init.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(
+		$('a[href^="#"]').on('click', function(event) {
+
+			var target = $( $(this).attr('href') );
+
+			if( target.length ) {
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1500);
+			}
+
+		})
+	);
+	
 </script>
 </body>
 </html>
