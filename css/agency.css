@@ -859,7 +859,7 @@ body {
  #head-image {
     text-align: center;
     color: #fff;
-    background-attachment: fixed;
+    background-attachment: center;
     background-image: url(../img/photos/broadmarsh.jpg);
     background-position: center center;
     background-repeat: none;
@@ -887,7 +887,7 @@ body {
 #retailer {
     text-align: center;
     color: #fff;
-    background-attachment: fixed;
+    background-attachment: center;
     background-image: url(../img/photos/cobden.jpg);
     background-position: center center;
     background-repeat: none;
