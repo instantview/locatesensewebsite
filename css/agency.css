@@ -951,10 +951,10 @@ body {
 
 @media(max-width: 768px){
     .ipad {
-        width: 350px;
+        width: 300px;
     }
 
     .iphone {
-        width: 150px;
+        width: 200px;
     }
 }
