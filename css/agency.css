@@ -315,7 +315,7 @@ section {
 section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 section h3.section-subheading {
@@ -940,7 +940,7 @@ body {
     }
 
     .iphone {
-        width: 300px;
+        width: 200px;
     }
 
     .feature-text {
