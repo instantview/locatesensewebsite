@@ -899,11 +899,11 @@ body {
 }
 
 .ipad {
-    width: 900px;
+    width: 600px;
 }
 
 .iphone {
-    width: 400px;
+    width: 600px;
 }
 
 .feature-text {
@@ -936,7 +936,7 @@ body {
     }
 
     .ipad {
-        width: 550px;
+        width: 400px;
     }
 
     .iphone {
