@@ -936,15 +936,25 @@ body {
     }
 
     .ipad {
-        width: 450px;
+        width: 550px;
     }
 
     .iphone {
-        width: 300px;
+        width: 400px;
     }
 
     .feature-text {
         font-size: 30px;
         margin-top: 1em;
+    }
+}
+
+@media(max-width: 768px){
+    .ipad {
+        width: 350px;
+    }
+
+    .iphone {
+        width: 300px;
     }
 }
