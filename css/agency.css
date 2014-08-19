@@ -903,7 +903,7 @@ body {
 }
 
 .iphone {
-    width: 600px;
+    width: 200px;
 }
 
 .feature-text {
@@ -940,7 +940,7 @@ body {
     }
 
     .iphone {
-        width: 400px;
+        width: 300px;
     }
 
     .feature-text {
@@ -955,6 +955,6 @@ body {
     }
 
     .iphone {
-        width: 300px;
+        width: 150px;
     }
 }
