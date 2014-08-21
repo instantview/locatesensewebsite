@@ -397,12 +397,12 @@
     <script>
 
         $( document ).ready(function() {
-                  console.log("test");
-                  alert("test");
+              
             $(".contactForm").submit(function(){
-                  console.log($("#email").val());
+                 
 
                 var email = $(".form-email").val(); // get email field value
+                 console.log(email);
                 var name = $(".form-name").val(); // get name field value
                 var msg = $(".form-message").val(); // get message field value
                 var tel = $(".form-phone").val(); // get message field value
@@ -430,7 +430,9 @@
                     }
                 })
                 .done(function(response) {
+
                     console.log($("#email").val());
+
                     alert('Your message has been sent and will will contact you shortly. Thank you!'); // show success message
                     $("#name").val(''); // reset field after successful submission
                     $("#email").val(''); // reset field after successful submission
