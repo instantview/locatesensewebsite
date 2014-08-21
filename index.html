@@ -397,12 +397,13 @@
     <script>
 
         $( document ).ready(function() {
+            console.log("#email");
               
             $(".contactForm").submit(function(){
                  
 
                 var email = $(".form-email").val(); // get email field value
-                 console.log("#email");
+
                 var name = $(".form-name").val(); // get name field value
                 var msg = $(".form-message").val(); // get message field value
                 var tel = $(".form-phone").val(); // get message field value
