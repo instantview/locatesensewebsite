@@ -2063,6 +2063,12 @@ body{
   text-align: center;
 }
 
+@media (max-width: 980px){
+  #logo-image {
+    height: 220px;
+  }
+}
+
 @media (max-width: 500px){
   #logo-image {
     height: 150px;
